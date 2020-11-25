@@ -11,7 +11,7 @@ const Movie = (props) => {
   return (
     <div className='container mb-3'>
       <div className='row text-center'>
-        <div className="col-6">
+        <div className="col-6 img">
           <img style={{width: '150px'}} src={img} alt={title}/> 
         </div>
         <div className="col-6 text-left button">
