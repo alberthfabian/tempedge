@@ -10,10 +10,10 @@ const Modal = () => {
 
   return (
     <div className='d-flex justify-content-center modal'>
-      <div className='border border-primary rounded position-absolute bg-white' style={{width: '400px'}}>
+      <div className='border border-primary rounded position-absolute bg-white' style={{width: '300px'}}>
         <div className='d-flex justify-content-center mt-3'>
           <img className='mr-3' style={{width: '30px', height: '30px'}} src={heart} alt='Heart'/>
-          <h3>Added to Favorites</h3> 
+          <h4>Added to Favorites</h4> 
         </div>
         <div className='text-right mr-3'>
           <button type='button' className='btn btn-primary mb-3' onClick={() => dispatch(modal(false))}>Close</button>

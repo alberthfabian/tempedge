@@ -2,3 +2,12 @@
   width: 88%;
   cursor: pointer;
 }
+
+.container .row .figure img:hover{
+  width: 75%;
+  cursor: pointer;
+}
+
+.container .row .figure img{
+  width: 250px;
+}

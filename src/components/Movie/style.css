@@ -12,4 +12,12 @@
   margin: auto;
 }
 
+.container .row .img img:hover{
+  width: 160px;
+  cursor: pointer;
+}
+
+.container .row .img img{
+  width: 150px;
+}
 
