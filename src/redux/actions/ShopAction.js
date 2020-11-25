@@ -8,7 +8,7 @@ export const FAVORITES = 'FAVORITES';
 
 export const initial = (name) => {
   return dispatch => {
-    return axios.get(`http://www.omdbapi.com/?i=tt3896198&apikey=b64a56c4&s=${name}`)
+    return axios.get(`https://www.omdbapi.com/?i=tt3896198&apikey=b64a56c4&s=${name}`)
     .then(response => {
       dispatch({
         type: 'INITIAL',
@@ -21,7 +21,7 @@ export const initial = (name) => {
 
 export const watch_movie = (id) => {
   return dispatch => {
-    return axios.get(`http://www.omdbapi.com/?i=${id}&apikey=b64a56c4`)
+    return axios.get(`https://www.omdbapi.com/?i=${id}&apikey=b64a56c4`)
     .then(response => {
       dispatch({
         type: 'WATCH_MOVIE',
@@ -35,12 +35,5 @@ export const modal = (value) => {
   return {
     type: MODAL,
     payload: value
-  }
-}
-
-export const favorites = (favorite) => {
-  return {
-    type: FAVORITES,
-    payload: favorite
   }
 }
