@@ -1,0 +1,4 @@
+.container .row .figure img:hover{
+  width: 88%;
+  cursor: pointer;
+}

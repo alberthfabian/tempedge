@@ -1,0 +1,16 @@
+
+.button {
+  position: relative;
+}
+
+.button .delete {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 30%;
+  margin: auto;
+}
+
+
+

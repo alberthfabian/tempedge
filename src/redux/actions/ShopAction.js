@@ -3,6 +3,8 @@ import axios from 'axios';
 export const WATCH_MOVIE = 'WATCH_MOVIE';
 export const RETURN_POKEMON = 'RETURN_POKEMON';
 export const INITIAL = 'INITIAL';
+export const MODAL = 'MODAL';
+export const FAVORITES = 'FAVORITES';
 
 export const initial = (name) => {
   return dispatch => {
@@ -29,9 +31,16 @@ export const watch_movie = (id) => {
   };
 }
 
-export const return_pokemon_action = (cant) => {
+export const modal = (value) => {
   return {
-    type: RETURN_POKEMON,
-    payload: cant
+    type: MODAL,
+    payload: value
+  }
+}
+
+export const favorites = (favorite) => {
+  return {
+    type: FAVORITES,
+    payload: favorite
   }
 }

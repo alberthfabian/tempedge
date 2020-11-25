@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import movie_shop from './gameShopReducer';
-import buscador from './buscadorReducer';
+import movie_shop from './ShopReducer';
+import like from './buscadorReducer';
 
 const rootReducers = combineReducers({
   movie_shop,
-  buscador
+  like
 });
 
 export default rootReducers;

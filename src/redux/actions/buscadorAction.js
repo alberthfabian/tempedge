@@ -1,45 +1,16 @@
-import Axios from "axios";
+export const FAVORITES = 'FAVORITES';
+export const REMOVE_FAVORITES = 'REMOVE_FAVORITES';
 
-export const FETCH_POKEMON_REQUEST = 'FETCH_POKEMON_REQUEST';
-export const FETCH_POKEMON_SUCCESS = 'FETCH_POKEMON_SUCCESS';
-export const FETCH_POKEMON_FAILURE = 'FETCH_POKEMON_FAILURE';
-
-// Actions
-export const fetchPokemonRequest = () => {
+export const favorites = (value) => {
   return {
-    type: FETCH_POKEMON_REQUEST
+    type: FAVORITES,
+    payload: value
   }
 }
 
-export const fetchPokemonSuccess = (Pokemon) => {
+export const remove_favorites = (value) => {
   return {
-    type: FETCH_POKEMON_SUCCESS,
-    payload: Pokemon
+    type: REMOVE_FAVORITES,
+    payload: value
   }
 }
-
-export const fetchPokemonFailure = (error) => {
-  return {
-    type: FETCH_POKEMON_FAILURE ,
-    payload: error
-  }
-}
-
-const API = 'http://www.omdbapi.com/?i=';
-// const ID = 'tt3896198';
-const KEY = '&apikey=b64a56c4'; 
-
-const fetchPokemon = (valor) => {
-  return (dispatch) => {
-    dispatch(fetchPokemonRequest());
-    Axios.get(`${API}${valor}${KEY}`)
-      .then(response => {
-        dispatch(fetchPokemonSuccess([response.data]));
-      })
-      .catch(error => {
-        dispatch(fetchPokemonFailure('No se encontro el pokemon'));
-      });
-  }
-}
-
-export default fetchPokemon;

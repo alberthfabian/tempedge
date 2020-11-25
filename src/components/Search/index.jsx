@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-// import fetchPokemon from '../../redux/actions/buscadorAction';
 import { initial } from '../../redux/actions/ShopAction';
 import { Link } from 'react-router-dom';;
 
@@ -19,7 +18,7 @@ const Search = () => {
         }
       }/>
       <Link to='/'>
-        <button className='btn btn-warning text-white' onClick={() => {
+        <button className='btn btn-warning text-white ml-3' onClick={() => {
           dispatch(initial(name))
         }}>Enviar</button>
       </Link>
